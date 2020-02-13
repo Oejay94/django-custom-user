@@ -3,6 +3,7 @@ from django.contrib.auth.forms import UserCreationForm
 
 from user.models import CustomUser
 
+
 class SignUpForm(UserCreationForm):
     class Meta:
         model = CustomUser
@@ -12,6 +13,7 @@ class SignUpForm(UserCreationForm):
             'username',
             'age'
         ]
+
 
 class LoginForm(forms.Form):
     username = forms.CharField(max_length=30)
